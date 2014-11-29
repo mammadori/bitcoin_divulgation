@@ -58,3 +58,8 @@
 *.mtc
 *.mtc0
 
+
+# kile
+*.tex.backup
+
+
