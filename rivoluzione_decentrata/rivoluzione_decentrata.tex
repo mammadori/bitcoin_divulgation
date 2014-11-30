@@ -186,11 +186,14 @@ il \emph{Bitcoin}\footnote{\url{https://bitcoin.org/it/}}; ma andiamo con ordine
 
 
 \lettrine{I}{l 31 Ottobre del 2008} veniva
-postato\footnote{\url{http://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html}} 
-su una mailing list di crittografia un pdf che sta cambiando permanentemente
- il paradigma monetario e finanziario nel quale siamo immersi fin
-dai tempi antichi. Cioè che la moneta dev’essere di proprietà di un
-Autorità Superiore, sia essa lo Stato, il Sovrano o una Banca Centrale.
+\emph{postato}\footnote{\url{http://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html}}, 
+su una mailing list di crittografia, un pdf che sta cambiando permanentemente
+ il paradigma monetario e finanziario nel quale siamo immersi da più di un secolo. Una parte del paradigma riguarda la \emph{presunta necessità che la moneta
+ sia gestita} o debba essere di \emph{proprietà di un
+autorità superiore}, sia essa lo Stato, il Sovrano o una Banca Centrale;
+questo ora non sarà più necessario, ma alla più conveniente, prima di \emph{divenire obsoleto}.
+
+\smallskip
 Il pdf si intitolava “\emph{Bitcoin: A Peer-to-Peer Electronic Cash
 System}”\footnote{Originale: \url{https://bitcoin.org/bitcoin.pdf}, e traduzione
 in italiano: \url{https://docs.google.com/file/d/0B1UsG65HCLkuMjA3Mzk2ZTUtYjQ4Ni00MjEyLTgzN2ItMjI3ODU0M2Y4MGUx/edit}
@@ -201,8 +204,8 @@ da un ente ed emessa in base ad un algoritmo.
 
 L’accettazione tra i crittografi che seguivano la mailing list non fu
 unanime, anzi, l’incredulità era forse il sentimento più diffuso. Del
-resto non possiamo biasimarli, anch’io la prima volta che lessi di
-Bitcoin pensai solamente che fosse un’idea curiosa, divertente, \emph{un
+resto non possiamo biasimarli, è facile la prima volta che si legge di
+Bitcoin pensare solamente che sia un’idea curiosa, divertente, \emph{un
 giochino intellettuale per nerd} e poco altro. Il problema
 d’accettazione del Bitcoin deriva dal fatto che non solo veniva
 introdotto un concetto al quale non siamo abituati, cioè una l’idea di
@@ -213,6 +216,13 @@ distribuito} permetteva funzionalità mai state prima disponibili in
 informatica e la moneta digitale era solo una prima applicazione di
 tale tecnologia.
 
+\begin{wrapfigure}{R}{.5\linewidth}
+\centering
+\vspace{-10pt}
+\fbox{\includegraphics[width=.9\linewidth]{figures/bitcoin_01.pdf}}
+\caption{L'articolo originale, il \emph{Satoshi's paper}.}
+%\vspace{-10pt}
+\end{wrapfigure}
 
 \bigskip
 
@@ -241,7 +251,7 @@ più semplice di una democrazia.
 
 
 Nel caso di una moneta digitale, una \emph{terza parte autorevole} permette di evitare la spesa multipla
-di uno specifico oggetto digitale (es. un ammontare di bitcoin) tenendo un solo registro, un solo \emph{libro mastro delle transazioni}, su 
+di uno specifico oggetto digitale (es. un ammontare di bitcoin) tenendo un solo registro, un solo \emph{libro mastro delle transazioni} su 
 un sistema informatico centrale, a costi minori di un sistema decentrato. Ma la complessità del sistema fiduciario necessario per 
 regolare l'accesso a questa unica risorsa di controllo, può essere molto costosa da manutenere ed eclissare anche i pochi vantaggi di efficienza potenziale.
 
@@ -262,7 +272,7 @@ crittografica a curva ellittica di tipo secp256k1,
 Bittorrent prese
 l’idea e la tecnologia per ottenere \emph{il libro mastro distribuito} come se
 fosse un file di un film in condivisione e infine, da un progetto
-pensato per ridurre lo spam nelle email\footnote{\emph{Hashcash},
+pensato per ridurre lo spam nell'email\footnote{\emph{Hashcash},
 \url{http://en.wikipedia.org/wiki/Hashcash}}, prese l’idea di associare una
 quantità di lavoro crittografico\footnote{\emph{Proof of Work}, il lavoro
 crittografico è una ripetizione di una funzione hash (double sha256)
@@ -319,7 +329,7 @@ sottomultiplo del bitcoin, cioè il “bit” che equivale a un milionesimo
 di bitcoin, o in altri termini 100 \emph{satoshi}, in modo da avere solo 2
 decimali invece di 8, come capita per le monete tradizionali a corso
 forzoso alle quali siamo abituati; l’idea del cambiare il riferimento
-di base nasce dalla constatazione che dovremmo trovare più facile a
+di base nasce dalla constatazione che dovremmo trovare più facile 
 pagare un caffé 3000 bits piuttosto che 0.003 bitcoin. 
 }.
 
@@ -455,7 +465,7 @@ milione di euro).
 Per poter accettare bitcoin è sufficiente crearsi un indirizzo bitcoin
 all'interno di una delle tante applicazioni software
 gratuite disponibili online\footnote{
-Un esempio di \emph{wallet} online sicuro e versatile è \url{https://greenaddress.it/it/}},
+Un esempio di \emph{wallet online}, non web, sicuro e versatile è \url{https://electrum.org/}},
 chiamate \emph{wallet} o \emph{portafogli}\footnote{Sarebbe più corretto chiamarle \emph{portachiavi},
 visto che memorizzano e gestiscono delle \emph{chiavi private}, ma gli ingegneri non sono sempre a loro agio con le metafore.}; detto
 indirizzo, un numero di 256 cifre binarie quasi sempre rappresentato da
@@ -481,7 +491,10 @@ tutte le transazioni avvenute dal primo blocco iniziale, il \emph{Genesis
 Block}\footnote{
 \longurl{https://blockchain.info/it/tx/4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b}}, ad oggi.
 \emph{Le transazioni avvengono tra pseudonimi}, cioè gli
-indirizzi bitcoin, da quello del mittente a quello del destinatario; se
+indirizzi bitcoin, da quello del mittente a quello del destinatario\footnote{Questo per semplificare il concetto, nella pratica
+che si sta diffondendo (standard \textsc{bip0032}  sugli \emph{hd-wallet}), si usano indirizzi nuovi ad ogni transazione e si mette al sicuro solo una \emph{masterkey}, che può 
+generare tutti gli indirizzi dei quali potremmo aver bisogno in alcune vite. Questa degli indirizzi bitcoin è una parte che il pubblico vedrà sempre meno, analogamente a
+quello accaduto per gli indirizzi internet con l'introduzione del \textsc{dns}.}.
 però ad esempio rendessi pubblico sul mio blog personale il mio
 indirizzo bitcoin, permettendo di associarlo alla mia persona, ecco che
 dall’anonimato scaturirebbe una funzionalità inaspettata e dirompente:
@@ -598,7 +611,7 @@ Mpesa per le rimesse dei migranti.
 \bigskip
 
 Ci sono state valute \emph{iperinflazionate}\footnote{Una valuta che dimezza
-il suo potere d'acquisto nell'arco di un mese si dice sia in iperinflazione, è
+il suo potere d'acquisto nell'arco di un mese si dice sia in \emph{iperinflazione}, è
 accaduto di recente in Zimbabwe: \url{http://it.wikipedia.org/wiki/Iperinflazione_nello_Zimbabwe}.}
 e ci sono valute a rischio nel mondo, dove il passaggio al bitcoin
 permetterebbe alla popolazione libera di effettuare scambi di merci e
@@ -619,13 +632,13 @@ transazioni bitcoin, è possibile associare dei dati ad una
 transazione nella Blockchain. Ora già alcuni di voi avranno intuito che
 se si possono scrivere dati in una struttura aperta, pubblica e
 crittograficamente protetta come la Blockchain, si sta facendo qualcosa
-di nuovo\footnote{Un buon video a questo riguardo lo si trova su
-\url{http://youtu.be/YIVAluSL9SU}}.
+di nuovo.\footnote{Un buon video a questo riguardo lo si trova su
+\url{http://youtu.be/YIVAluSL9SU}}
 
 
 \bigskip
 
-Certo, si possono scrivere dei dati nel \emph{cloud}\footnote{\url{http://it.wikipedia.org/wiki/Cloud_computing}}, o su un sito web, ma
+Certo, si possono scrivere dei dati nel \emph{cloud},\footnote{\url{http://it.wikipedia.org/wiki/Cloud_computing}} o su un sito web, ma
 questi dati non sono inalterabili e non ne è garantita la permanenza. Può incendiarsi un data center
 o rompersi l'attrezzatura nonostante le ridondanze prudenziali, ma quello che purtroppo può accadere
 è che \emph{il gestore del cloud}, nel quale dobbiamo \emph{necessariamente riporre fiducia}, può, per volontà o disattenzione, rovinare o cancellare i miei
@@ -658,7 +671,7 @@ svolta senza notaio e ad un costo in paragone risibile.
 \bigskip
 
 Bitcoin \emph{è programmabile}. Possiamo usarlo per creare degli \emph{Smart
-Contracts}, cioè dei contratti ``elettronici'' nei quali una parte \emph{non può essere
+Contract}, cioè dei contratti ``elettronici'' nei quali una parte \emph{non può essere
 disonesta}: questo significa che non serviranno le funzioni
 giuristizionali atte a garantire l’adempimento del contratto (es. la
 funzione della polizia per far rispettare il contratto o del tribunale
@@ -701,7 +714,7 @@ mercato globale.
 
 \bigskip
 
-\emph{Smart contracts sulla Blockchain} sono un componente
+Gli \emph{Smart contract sulla Blockchain} sono un componente
 ideale per qualsiasi tipo di \emph{sistema
 elettorale} che voglia essere \emph{non manipolabile} da nessuno, pur
 mantenendo la caratteristica indispensabile di garantire il voto
@@ -732,7 +745,7 @@ riserverà invece il futuro?
 Probabilmente una vasta schiera di \emph{crypto-currencies} tutte scambiabili con
 quella per eccellenza, il bitcoin, che saranno progettate per scopi
 specifici, anche complessi. Sto parlando di quelle che vengono
-attualmente chiamate Appcoin, come le attuali \emph{Namecoin} che permette di
+attualmente chiamate \emph{Appcoin}, come le attuali \emph{Namecoin} che permette di
 decentralizzare un protocollo internet come il \textsc{dns} o \emph{Ethereum} che punta
 a divenire una piattaforma per gli \emph{smart contract}.
 
@@ -766,7 +779,7 @@ raggiungerà il volume dei commerci tra umani.
 
 Le reali possibilità sono ancora al di là della nostra immaginazione,
 difficile immaginare cosa verrà; sempre che non si sia quel genere di
-persone che se fossero vissute negli anni 60 sarebbero state in grado
+persone che se fossero vissute negli anni '60 sarebbero state in grado
 di immaginare, guardando armadi rumorosi pieni di lucine che un giorno
 qualcuno avrebbe giocato ad un gioco di guerra, contro un giocatore
 coreano, muovendo le dita su di un vetro sotto il quale appaiono delle
@@ -816,7 +829,7 @@ I sorgenti \LaTeX sono disponibili su:
      
      \qrfig{https://bitcointalk.org/index.php?topic=583.msg11405\#msg11405} 
      \qrfig{https://bitpay.com/} 
-     \qrfig{https://greenaddress.it/it/}
+     \qrfig{https://electrum.org/}
      
      \qrfig{https://www.bitpesa.co/} 
      \qrfig{http://motherboard.vice.com/read/bitcoin-could-change-voting-the-way-its-changed-money}
