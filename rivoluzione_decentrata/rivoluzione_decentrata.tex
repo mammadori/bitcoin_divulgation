@@ -5,6 +5,7 @@
 % Bitcoin: the decentralization revolution
 % 
 % copyright 2014 Marco Amadori <amadori@fbk.eu>
+% copyright 2015 Marco Amadori <amadori@inbitcoin.it>
 % 
 % 
 % This work is released under license cc-by-sa 4.0
@@ -12,6 +13,8 @@
 % a copy of the license should be available within the packaging
 % of this article or could be obtained from:
 % http://creativecommons.org/licenses/by-sa/4.0/deed.it
+%
+% deps: sudo apt-get install texlive-lang-italian texlive-latex-extra texlive-fonts-extra
 % 
 
 \documentclass[a4paper,12pt,italian]{article}
@@ -43,6 +46,7 @@
 %   hyperfootnotes=false,%
     bookmarks=true%
     ]{hyperref}
+\def\UrlBreaks{\do\/\do-} % break urls on hypens and slash
 
 \usepackage{lettrine}
 \usepackage[norule]{footmisc} % in italiano non vanno separate le note a pié di pagina
@@ -68,7 +72,8 @@
     \begin{center}
         {\huge\@title\par}
         \bigskip
-        {\ttfamily \today{}\par}
+        {\ttfamily 4 dicembre 2014\par
+        aggiornato il \today{}\par}
     \end{center}
 }
 \makeatother
@@ -98,7 +103,7 @@
 
 \date{\vspace{-5ex}}
 \author{\vspace{-5ex}}
-\author{\begin{small}Marco Amadori \href{mailto:amadori.fbk.eu}{<amadori@fbk.eu>} \\ 
+\author{\begin{small}Marco Amadori \href{mailto:amadori@inbitcoin.it}{<amadori@inbitcoin.it>} \\ 
 Tecnologo e Ricercatore presso FBK
 \end{small}}
 
@@ -148,7 +153,8 @@ sistema per la prima volta l’atteggiamento fu molto diverso. Per fare
 un esempio: i primi proprietari di auto in Inghilterra dovevano per
 legge avere a bordo un pilota, un ingegnere e una persona con una
 bandierina con il compito di precedere il mezzo di trasporto e fare largo tra
-carri e pedoni. \emph{I primi automobilisti erano} dunque visti come degli
+carri e pedoni\footnote{\url{https://en.wikipedia.org/wiki/Locomotive_Acts}}.
+\emph{I primi automobilisti erano} dunque visti come degli
 eccentrici, \emph{dei pazzi che rischiavano la vita} con macchinari puzzolenti
 che procedevano a passo d’uomo e che non avevavo proprie strade dove
 essere usati.
@@ -556,7 +562,7 @@ il problema della fluttuazioni dei valori di cambio rendendolo molto
 appetibile. Un negozio, con solo uno smarphone, un tablet o
 semplicemente un QRcode adesivo di un indirizzo bitcoin, può accettare
 questa moneta direttamente e senza rischi. Ci sono aziende, come
-Bitpay\footnote{\url{https://bitpay.com/}}, che dato un prezzo in euro,
+inbitcoin\footnote{\url{https://inbitcoin.it}, nota bene, è l'azienda del quale l'autore è \emph{founder}.}, che dato un prezzo in euro,
 permettono ai commercianti di accettare pagamenti in bitcoin
 continuando però a ricevere euro sul conto in banca, mascherando
 completamente al mercante la volatilità momentanea del bitcoin e a 0\%
@@ -799,8 +805,8 @@ attivo}, preparatevi almeno i popcorn e \emph{godetevi lo spettacolo}.
 
 
 \begin{minipage}{\linewidth}
-Marco Amadori \href{mailto:amadori@fbk.eu}{<amadori@fbk.eu>} \\
-Tecnologo e Ricercatore presso la Fondazione Bruno Kessler \url{http://fbk.eu}.
+Marco Amadori \href{mailto:amadori@inbitcoin.it}{<amadori@inbitcoin.it>} \\
+Imprenditore Bitcoin, già Tecnologo e Ricercatore presso la Fondazione Bruno Kessler (\url{https://fbk.eu}).
 \end{minipage}
 
 
@@ -819,6 +825,264 @@ I sorgenti \LaTeX sono disponibili su:
 \noindent
 \longurl{https://github.com/mammadori/bitcoin\_divulgation/tree/master/rivoluzione\_decentrata}.
 
+\pagebreak 
+
+\subsection*{Aggiornamento}
+
+Oggi, alle porte di Marzo 2016, sono passati 15 mesi dalla prima stesura dell'articolo ed è stato necessario intervenire,
+visto l'uso che è stato fatto di questo documento, come una gentile introduzione al fenomeno nella sua complessità.
+Ho corretto qualche paragrafo per renderlo più scorrevole, ho aggiunto dei link in riferimento ad alcuni passaggi 
+e ho cambiato la mia mail di riferimento, visto che ho seguito il mio stesso consiglio finale decidendo di fare la metamorfosi 
+da Ricercatore ad Imprenditore del settore. Qui di seguito un piccolo aggiornamento sulla tematica Blockchain,
+l'idea è di tenere aggiornato questo documento finché avrà senso farlo. Di seguito un adattamento di 
+un blog post con delle riflessioni su quanto accaduto in questi mesi e su come ho cambiato \emph{accento} sulla Blockchain.
+
+\pagebreak
+
+\begin{center}
+\section*{Bitcoin e Blockchain: Una Storia Zen}
+\end{center}
+
+
+
+ \setlength{\epigraphwidth}{.5\textwidth}
+
+\epigraph{\textit{Prima che una persona studi lo Zen, \\
+i monti sono monti 
+e le acque sono acque; \\
+dopo una prima occhiata alla verità dello Zen, \\
+i monti non sono più monti 
+e le acque non sono più acque. \\
+\smallskip 
+Dopo l'illuminazione, \\
+i monti tornano ad essere monti 
+e le acque ad essere acque.}}{{}- Detto Zen}
+
+
+\bigskip
+
+
+A fine 2014 \textbf{scrivevo}\footnote{Il riferimento è a questo documento, infatti questo aggiornamento è stato pubblicato anche in forma di blog post su \url{www.byoblu.com} con riferimento all'articolo originale di dicembre 2014.} che \textbf{il Bitcoin era rivoluzionario e
+dirompente, ma} che \textbf{la vera innovazione}, tecnologica, \textbf{era “La
+Blockchain”}, il registro permanente, inalterabile e ad accesso aperto che traccia ogni transazione di bitcoin
+fin dai tempi della creazione del suo primo blocco, biblicamente chiamato Blocco della Genesi, generato (“minato”) da
+\textbf{Satoshi Nakamoto}, pseudonimo del suo leggendario creatore.
+
+\bigskip
+
+Non è andata malissimo, la nuova \emph{buzzword} “Blockchain” è stata abbracciata
+entusiasticamente dai media: l’Economist\footnote{\url{http://www.economist.com/news/leaders/21677198-technology-behind-bitcoin-could-transform-how-economy-works-trust-machine}}
+ci ha dedicato una copertina e le grosse istituzioni Bancarie e Finanziarie
+hanno investito e stanno investendo in ricerca, seppur timidamente, nel settore.
+Questo accade perché la Blockchain ha applicazioni
+riguardanti i costi per stabilire e mantenere la fiducia (in inglese \emph{Trust}, ovvero \emph{il costo per stabilire
+e mantenere delle relazioni personali e/o di business} per potere effettuare le transazioni) che possono essere ridotti
+notevolmente in questo passaggio \textbf{da} sistemi​ \textbf{trusted a} sistemi \textbf{trustless} (ovvero senza necessità di doversi fidare di 
+autorità centrali di garanzia).
+
+\subsection*{La Blockchain come “il nuovo Bitcoin”}
+
+
+Come prevedibile, negli ambienti tradizionali del settore finanziaro, il sogno sembra essere principalmente una
+\textbf{Blockchain Privata}, questo perché alcuni livelli di \textbf{disintermediazione del
+“Trust”} come definito fin qui, forniti da queste tecnologie, possono fare risparmiare tempo e denaro. La mia
+opinione personale è che questa delle \textbf{blockchain private sia} per lo più fumo negli occhi,
+quasi \textbf{un ossimoro}, come “acqua asciutta” o “scienze religiose”; per avere
+\textbf{una vera blockchain} e non un semplice database distribuito, \textbf{serve un
+gettone} (\emph{token}) che possa avere valore economico, servono degli \textbf{incentivi corretti}
+(\emph{mining}) ed è necessario un \textbf{accesso aperto} alla tecnologia, serve avere
+\textbf{Permissionless Innovation}, cioè poter provare ad innovare direttamente su una piattaforma aperta,
+senza necessità di 'chiedere il permesso'
+ad una Telco (Internet) o ad un Gruppo Bancario (Bitcoin). Ma tant’è, tanti auguri ad R3\footnote{R3cev è una
+startup/consorzio di 42 banche globali e arcinote che promette loro strumenti per blockchain private.} nel
+vendere alle banche il suo \emph{snake-oil}\footnote{I famigerati intrugli oleosi venduti nei secoli bui
+come elisir dalle proprietà taumaturgiche.}.
+ 
+ 
+\bigskip
+ 
+La Blockchain funzionava anche come ottimo dissimulatore: catalizzando su di sé tutta l’attenzione, il bitcoin come valuta -- un potenziale nemico, anche se di dimensioni non ancora preoccupanti -- veniva oscurato dalla tecnologia che serviva a
+realizzarlo. Secondo la propaganda dei fautori della Blockchain Privata (\textbf{Permissioned Blockchain}),
+si poteva tenere il buono che c’era nel Bitcoin, cioè tutte le Innovazioni della Blockchain, ma \textbf{senza
+il bitcoin come moneta}, troppo anarchica e senza (il loro) controllo.
+
+\smallskip
+
+
+
+Non mi sono del tutto sbagliato scrivendo quell’articolo in quel momento, \textbf{spostare
+l’interesse} che fino a quel momento i media e un po’ tutti i bitcoiner avevano \textbf{per il prezzo
+del bitcoin}, cioè da bitcoin come asset speculativo e \textbf{puntare sull’incredibile tecnologia
+soggiacente}, dove si potevano trovare le gemme dagli usi concreti e di valore immediato, era necessario e
+urgente. \textbf{Necessario} perché dispiaceva che chi leggeva solo nella lingua di Dante non sapesse
+quali preziosi tesori nascondesse quello che i giornali al tempo dipingevano, quando andava bene, come uno schema Ponzi
+per fare arricchire nerd brufolosi. \textbf{Urgente} perché era il caso di non rimanere troppo indietro, come paese,
+ quando le potenzialità italiane specifiche (creatività e diffusione della telefonia mobile) potevano determinare 
+ un ruolo importante in questa industria emergente.
+
+
+\bigskip
+
+
+Nel 2015 abbiamo assistito a quasi un \textbf{rebranding mediatico} (la strategia di marketing
+che consiste nel mutare stile, nome, design, terminologia a uno stesso prodotto per commercializzarlo meglio)​, simile ad un ipotetico
+\textit{pivoting} per la reale “Startup Distribuita Autonoma” Bitcoin, per spostare l’attenzione da quello che sembrava ormai
+solo una semplice moneta digitale, anche se globale, anche se non controllabile da un singolo ente, anche se \textit{non
+inflazionaria per design} \textbf{verso una tecnologia più rassicurante, più Bank-Friendly}, meno
+crypto e meno anarchica: La Blockchain.
+
+
+
+Non mi sbagliavo dunque, visti i successi dell’idea, ma non vedevo correttamente quello che già era in evidenza e
+che lo era stato fin dall’inizio: la valuta, la moneta, la prima applicazione della Blockchain, era il luogo dove
+risiedeva la reale portata dirompente e rivoluzionaria di questa nuova tecnologia.
+
+
+\bigskip
+
+
+\textbf{Store of Value}. Bene rifugio.
+
+\bigskip
+
+La funzione più criticabile e più bistrattata da sempre del bitcoin è la sua vera \textbf{Killer
+Application}.
+
+\bigskip
+
+Perché sulle prime questa idea sembrava assurda?
+
+\subsection*{Bitcoin: come comprenderlo al di là dei pregiudizi}
+
+
+A parte gli ovvi discorsi sul \emph{bias cognitivo} e sulla paura dell’ignoto, \textbf{ci sono dei problemi reali ad affrontare
+intellettualmente il Bitcoin}.
+
+\smallskip
+
+Non i bitcoin rappresentino un  grosso problema per chi non ne conosce la complessità sottostante: 
+\textbf{siamo abituati ad usare diverse forme di denaro senza saperne troppo sul funzionamento}. Usiamo per esempio il contante senza sapere 
+quanti euro ci siano in circolazione, quanti ce ne saranno
+tra dieci anni e in che percentuale esatta siano di carta e metallo, quanti siano fatti esclusivamente di numeri in un computer di una
+banca o se le banche ne presteranno più facilmente quest'anno rispetto all’anno precedente.
+
+Così come si può guidare un’auto senza sapere la composizione chimica della mescola delle ruote, \textbf{si può
+comprare una birra al bar in bitcoin} premendo ‘invia’, \textbf{senza sapere come funziona}
+una Lightning Network\footnote{\url{https://lightning.network/lightning-network-technical-summary.pdf}}.
+
+\smallskip
+
+
+Ma se invece vogliamo proprio capirlo, allora diventa un tantino complesso, anche se totalmente documentato e
+trasparente, trattandosi di informatica \textit{Open Source}.
+
+
+\bigskip
+
+
+Se affrontassimo il Bitcoin con la lente di un economista monetario, subito ci faremmo distrarre dal fatto che \textbf{la
+moneta è volutamente progettata per divenire nel tempo deflattiva} ed evocheremmo subito la crisi del ‘29 e le persone
+sul baratro della rovina finanziaria grazie a debiti irripagabili. Se lo paragonassimo all’oro, peccherebbe di fisicità e storia millenaria 
+nel suo utilizzo come bene rifugio. Se la si guardasse
+come un prodotto web, penseremmo che possa essere rimpiazzato, come Facebook fece con Myspace. Se la si osservasse come
+tecnologia potremmo pensare che verrà soppiantato da una tecnologia superiore. Se lo guardassimo come investimento lo
+troveremmo troppo rischioso e volatile.
+
+
+\textbf{Gli esperti solitamente non riescono a dipanare la matassa} perché un po’ tutti i modelli
+economici, monetari e finanziari, l’esperienza pregressa nel “settore” o la letteratura specifica, non ci aiutano molto
+a capire come questo curioso concetto possa funzionare o come possa non essere stato già soppiantato da un suo clone.
+
+
+\bigskip
+
+
+Il problema sta proprio nel \textbf{riuscire a vedere il fenomeno nella sua interezza}, senza
+osservarlo tramite modelli parziali. Certo, \textbf{la pratica val più della grammatica}: se ordinassimo un 
+un caffé pagandolo in bitcoin dal parcheggio di un bar, trovandoselo già servito con lo scontrino al
+nostro tavolino preferito, riusciremmo a mettere insieme i pezzi più facilmente.
+
+
+La pratica dell'uso di bitcoin è infinitamente più
+semplice, già ora, della teoria. \textbf{Coi primi bitcoin ricevuti}, magari dallo smartphone di un
+amico, \textbf{si sente nel cervello un primo \emph{“click”}}, con il primo acquisto in un
+negozio ne scatta un secondo ed i dubbi teorici svaniscono come neve al sole.
+
+\textbf{L’innovazione} sconta il fatto che \textbf{non entra in nessuna categoria già
+conosciuta} e prevedibile e tutti gli esperti investigano il fenomeno con gli strumenti che il passato gli ha
+consegnato. Come quasi nessuno scrittore di fantascienza (salvo pochi e osannati 'guru') è mai riuscito a prevedere le innovazioni dirompenti che avrebbe
+portato il futuro (come Internet, gli Smartphone e il Bitcoin), pochissimi riescono oggi a vedere il fenomeno nel suo insieme.
+È come se si trovassero nella famigerata caverna di Platone e osservassero solo delle ombre, scambiandole per realtà.
+
+\bigskip
+
+
+\textbf{Ma è più facile comprare da Amazon, godendo di uno sconto dal 15 al 50\%} solo per il privilegio di farlo
+in bitcoin (grazie a servizi come Purse.io) \textbf{che} passare ore a \textbf{studiare la
+Teoria dei Giochi}, imparare la Crittografia a Curva Ellittica o capire quando entrerà in gioco il
+\textbf{Lindy Effect}\footnote{\url{https://en.wikipedia.org/wiki/Lindy_effect}},
+ la \textbf{legge di Thiers}\footnote{\url{https://en.wikipedia.org/wiki/Thiers\%27_law}} o di
+ \textbf{Metcalfe}\footnote{\url{https://it.wikipedia.org/wiki/Legge_di_Metcalfe}}.
+
+
+\bigskip
+
+
+\subsection*{Il successore del Bitcoin è\ldots il Bitcoin!}
+
+\textbf{La demografia cambia.}
+
+\bigskip
+
+Per un \emph{millennial}\footnote{I nati poco prima del cambio di millennio, da fine anni 80 a poco prima del 2000, nativi digitali,
+Internet per loro c'è sempre stata.} \textbf{il fatto che alcuni di noi si rechino in banca} per prestare denaro
+ad un terzo, affinché questo terzo ci permetta in futuro di spenderlo (mentre il \emph{millennial} preme solo ‘invia’ sul suo
+smartphone) è un po’ come per noi vedere le file di anziani alla posta che ritirano la pensione in contanti. Sembra
+\textbf{una cosa inutilmente faticosa e per la quale ci sono metodi più rapidi}, grazie alla
+tecnologia.
+
+\smallskip
+
+In questi anni \textbf{molti hanno provato a dirottare} verso altre tecnologie,
+aziende o prodotti quello che mediaticamente fu \textbf{l’entusiasmo per il bitcoin}, lo \emph{Hype} del 2013 per il
+quale sembravano tutti impazziti. Nel 2013 e nel 2014 molti sviluppatori/truffatori provarono a \textbf{sfruttare
+lo \emph{hype}} per dire che la loro \emph{Altcoin} (clone di bitcoin, come codice o funzionalità) era “\textbf{il
+nuovo bitcoin}”, \emph{Ethereum} è il bitcoin del 2014, il \emph{bitcoin 2.0} è il bitcoin del 2015, il \emph{BitGold} è il nuovo
+bitcoin, la Blockchain è il nuovo bitcoin, e così via\ldots
+
+Ma \textbf{gli utenti mondiali di una qualsiasi \emph{Altcoin} sono meno dei nuovi utenti entrati in bitcoin
+questa settimana}, una blockchain alternativa (\emph{Altchain}) è solo un registro, un database condiviso; la
+realtà è che Bitgold è centralizzato soffre di "rischio della controparte" (c'è un'unica controparte a conferirgli valore, e se questa lo abbandona, BitGold non vale più niente)." bitgold è centralizzato, 
+con rischi di controparte . Tutte queste cose \textbf{mancano} o \textbf{del network effect di
+bitcoin} (in senso ampio, VC money, sviluppatori, startup) \textbf{oppure mancano di
+decentralizzazione}, accesso aperto alla tecnologia ed ubiquità.
+
+
+\bigskip
+
+
+\textbf{Bitcoin} non è un titolo che rappresenta valore, \textbf{è valore},
+\textbf{sono grammi di oro digitale} trasmissibili su un qualsiasi canale di comunicazione,
+ipersicuri, non censurabili, ad innovazione aperta, inclusivi, globali.
+
+
+\bigskip
+
+Concludendo, ringraziando gli amici revisori e Claudio Messora per aver semplificato l'accesso a questo \emph{addendum} e abbracciando sia lo \emph{Hype}, che lo \emph{Zen},
+vorrei veicolare questo meme\footnote{\url{https://it.wikipedia.org/wiki/Meme}}: 
+\bigskip
+
+
+\begin{large}\textbf{È Bitcoin il nuovo Bitcoin.}\end{large}
+
+
+\vfill
+
+Marco Amadori, Fondatore di \url{inbitcoin.it} e Ricercatore e Tecnologo presso Blockchainlab.
+
+\vfill
+
+
  \begin{figure}
   \centering
 
@@ -827,11 +1091,11 @@ I sorgenti \LaTeX sono disponibili su:
      \qrfig{http://youtu.be/YIVAluSL9SU}
      
      \qrfig{http://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html} 
-     \qrfig{http://en.wikipedia.org/wiki/Hashcash} 
+     \qrfig{http://en.wikipedia.org/wiki/Hashcash} 1
      \qrfig{http://it.wikipedia.org/wiki/Proof-of-work} 
      
      \qrfig{https://bitcointalk.org/index.php?topic=583.msg11405\#msg11405} 
-     \qrfig{https://bitpay.com/} 
+     \qrfig{https://inbitcoin.it/} 
      \qrfig{https://electrum.org/}
      
      \qrfig{https://www.bitpesa.co/} 
@@ -841,7 +1105,7 @@ I sorgenti \LaTeX sono disponibili su:
      \qrfig{http://www.slideshare.net/winklevosscap/money-is-broken-its-future-is-not}
      \qrfig{http://it.wikipedia.org/wiki/Google_driverless_car}
      {
-     \subcaptionbox{\centering% centering here generates an error
+     \subcaptionbox{% centering here generates an error
       {\scriptsize Ti è piaciuto questo articolo?} \\ {\ttfamily 1FBKmAA3gFzuT28MpA4EfuqQ5kJEFS9owS}}[.3\linewidth]{%
       \qrcode[height=2.2cm]{1FBKmAA3gFzuT28MpA4EfuqQ5kJEFS9owS}}%
      }
